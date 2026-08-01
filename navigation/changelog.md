@@ -1,7 +1,7 @@
-# X50 Navigation 0.12.4-i-am-here-route-anchor
+# X50 Navigation 0.12.5-live-gps-status
 
 - Protected binary Magisk module
 - Activation required
-- Magisk module versionCode: 30
-- SHA-256: `43f17c9febf6e9808db5e905d11d1ad5e266596f998be59ff53b79b4a5bd1a7d`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.4-i-am-here-route-anchor/x50-navigation-magisk.zip
+- Magisk module versionCode: 31
+- SHA-256: `a0a6b53c8cca3e5650aa13304c41b62c49a5e53a6a6c0368be924b819c213ac3`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.5-live-gps-status/x50-navigation-magisk.zip
