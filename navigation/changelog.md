@@ -1,8 +1,7 @@
-# X50 Navigation 0.12.12-monthly-license-epoch
+# X50 Navigation 0.12.13-license-types-info
 
-- Required licence epoch update: former v1 permanent licences are no longer accepted.
-- Adds signed `monthly` licences, expiring one calendar month after issuance.
-- The embedded licence type and expiry are signature-protected.
-- Detects a significant device-clock rollback after a successful licence check.
+- Supports signed `monthly` and `perpetual` v2 licences.
+- Adds licence details and safe `.lic` backup export to the app's Status page.
+- Keeps the v1 revocation boundary and device-clock rollback detection.
 
-Installed module versionCode: `38`.
+Installed module versionCode: `39`.
