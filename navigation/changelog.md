@@ -1,9 +1,8 @@
-# X50 Navigation 0.12.11-gps-time-anchor
+# X50 Navigation 0.12.12-monthly-license-epoch
 
-- Corrects a stable Relay↔head-unit GPS timestamp offset after four consistent
-  fixes; genuine delayed or inconsistent packets remain rejected.
-- Makes the native GPS badge reflect whether a fix is truly eligible for
-  FakeGPS start/correction. Fake OFF remains neutral grey.
-- Prevents double ON/TOGGLE from using an old Navigator cursor or falling back
-  to an old route-start coordinate.
-- Protected binary Magisk module; activation required.
+- Required licence epoch update: former v1 permanent licences are no longer accepted.
+- Adds signed `monthly` licences, expiring one calendar month after issuance.
+- The embedded licence type and expiry are signature-protected.
+- Detects a significant device-clock rollback after a successful licence check.
+
+Installed module versionCode: `38`.
