@@ -1,7 +1,9 @@
-# X50 Navigation 0.12.10-safe-location-backout
+# X50 Navigation 0.12.11-gps-time-anchor
 
-- Protected binary Magisk module
-- Activation required
-- Magisk module versionCode: 36
-- SHA-256: `70c1f76b7e93c2ad1fd3aedd4e4b1d3f9c79c1bb591084485ae9d19e003651e7`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.10-safe-location-backout/x50-navigation-magisk.zip
+- Corrects a stable Relay↔head-unit GPS timestamp offset after four consistent
+  fixes; genuine delayed or inconsistent packets remain rejected.
+- Makes the native GPS badge reflect whether a fix is truly eligible for
+  FakeGPS start/correction. Fake OFF remains neutral grey.
+- Prevents double ON/TOGGLE from using an old Navigator cursor or falling back
+  to an old route-start coordinate.
+- Protected binary Magisk module; activation required.
