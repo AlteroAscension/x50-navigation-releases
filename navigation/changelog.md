@@ -1,11 +1,7 @@
-# X50 Navigation 0.12.28-background-sdk-control
+# X50 Navigation 0.12.29-embedded-settings-font
 
-- Added an opt-in, root-backed AppMetrica controller: it disables only the two
-  Navigator AppMetrica services. Restart Navigator after changing the switch.
-- Confirmed on AVD: Navigator and Passport remain active while the separate
-  `:AppMetrica` process is absent; switching back restores the default state.
-- MapKit/FakeGPS, Firebase, Crashlytics, FCM and Passport are not changed by
-  this release.
-- Protected binary Magisk module; activation required.
-- Magisk module versionCode: 54.
-- SHA-256: `926fdd417854d4cf4fa4497ece65f4fce62d548e27b650dc8826f6505c9f0c40`.
+- Protected binary Magisk module
+- Activation required
+- Magisk module versionCode: 55
+- SHA-256: `73145d6dfe89f55d3ca9cce3d355857c8e16674b2029ad0bc9da2300da049218`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.29-embedded-settings-font/x50-navigation-magisk.zip
