@@ -1,12 +1,12 @@
-# X50 Navigation 0.12.26-external-status-badge
+# X50 Navigation 0.12.27-overlay-layout-final
 
 - Protected binary Magisk module; activation required.
-- Variant 2 moves the GPS/FakeGPS status badge out of the camera/limit card
-  to the right edge of the Navigator window.
-- The badge follows the native event host's live position and is removed when
-  that host hides or detaches, so route preview and driving layouts remain
-  coherent.
-- Large speed signs and both event blocks are not covered by the status.
-- Magisk module versionCode: 52.
-- SHA-256: `8e8ebcf146fba30da68b63160accf6ea79177c018c01cf95be2689111efb536d`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.26-external-status-badge/x50-navigation-magisk.zip
+- Finalised Variant 2 camera/limit composition: equal event blocks, centred
+  two-line content and full-size speed-limit signs.
+- GPS/FakeGPS status is a compact lower-right map-band badge with an explicit
+  label and colour bar. It reserves the Android navigation safe area and the
+  whole native right control rail, preventing overlap during Navigator layout
+  changes.
+- Magisk module versionCode: 53.
+- SHA-256: `5e0b90ad3384e65ec5b469fb31be10485b11fa8437466f48ee32d3b964bdbe37`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.27-overlay-layout-final/x50-navigation-magisk.zip
