@@ -1,7 +1,7 @@
-# X50 Navigation 0.12.41-manual-anchor-stability
+# X50 Navigation 0.12.42-route-stability-guard
 
 - Protected binary Magisk module
 - Activation required
-- Magisk module versionCode: 67
-- SHA-256: `3e877abfc30e6424583a7da68e9a7ab86dbb13407098047339c9f0c55acba9e7`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.41-manual-anchor-stability/x50-navigation-magisk.zip
+- Magisk module versionCode: 68
+- SHA-256: `98c39bc306e6a3a8db21b53ef93e830e8015b767682dedf3341e6acaea78a36e`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.42-route-stability-guard/x50-navigation-magisk.zip
