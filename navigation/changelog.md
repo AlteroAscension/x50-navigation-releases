@@ -1,12 +1,11 @@
-# X50 Navigation 0.15.1-calibration-ui
+# X50 Navigation 0.15.2-calibration-reset
 
 - X50 Navigation Magisk module
-- Возвращены рабочие карточки калибровки: текущие коэффициенты, кандидаты, пробег и качество обучения
-- Показано, что Learn и Locked плавно ведут коэффициент к кандидату, не перемножая их
-- GPS-коррекция перенесена из диагностики на страницу GPS
-- Перестроена первая строка раздела «Основное» без пустой области
+- Карточки в одном ряду выровнены по высоте во всех разделах
+- «О программе» упрощено до информации о X50 Navigation и карточки поддержки автора
+- После «Принять и Locked» сохраняются коэффициенты, но новая статистика обучения собирается с нуля
 - No activation required
 - Anonymous usage statistics: session start and duration only
-- Magisk module versionCode: 78
-- SHA-256: `ae8dfd9d89ae3bbd6a832645d93f7b3c65e353faa106c008b8bda6d1fc2eced3`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.1-calibration-ui/x50-navigation-magisk.zip
+- Magisk module versionCode: 79
+- SHA-256: `37240f3663de00533945ebd32e9a9c79db5254e48ec84298cf6564e5e36e036c`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.2-calibration-reset/x50-navigation-magisk.zip
