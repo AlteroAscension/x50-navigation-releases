@@ -1,10 +1,11 @@
 # X50 Navigation releases
 
 Public protected binary releases and Magisk update metadata for X50
-Navigation.
+Navigation. The Magisk module includes the three separate steering-wheel
+shortcut applications, so they do not need to be installed manually.
 
 This repository intentionally contains no application source code. A valid
 activation is required to use Navigation.
 
-The first public artifact will appear only after the protected-release review
-is complete.
+Navigation works without activation. It reports only anonymous session start
+and duration statistics; it does not send location, routes, speed or a raw VIN.

@@ -1,7 +1,8 @@
-# X50 Navigation 0.12.47-true-navbar-glass
+# X50 Navigation 0.14.0-bundled-shortcuts
 
-- Protected binary Magisk module
-- Activation required
-- Magisk module versionCode: 73
-- SHA-256: `a8395061aff00250d569e73e667b244c670080c14e995013e2f550af685491fb`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.12.47-true-navbar-glass/x50-navigation-magisk.zip
+- X50 Navigation Magisk module
+- No activation required
+- Anonymous usage statistics: session start and duration only
+- Magisk module versionCode: 76
+- SHA-256: `2ed66bf4d80d7acf5ec7cacdc7b21e7538abd0e283d6a5567b07a2b1670e7f4e`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.14.0-bundled-shortcuts/x50-navigation-magisk.zip
