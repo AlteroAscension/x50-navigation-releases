@@ -1,7 +1,7 @@
 # X50 Navigation 0.15.13-navigator-30.5
 
 - Restored the I-am-here action in Yandex Navigator 30.5.1.
-- Retained the I-am-here compatibility path for Yandex Navigator 29.7.0.
+- Known issue: the I-am-here action fails on Yandex Navigator 29.7.0.
 - Fixed real usage-session accounting in anonymous statistics.
 - No activation required.
 - Magisk module versionCode: 90
