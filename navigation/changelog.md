@@ -1,10 +1,9 @@
-# X50 Navigation 0.15.12-usage-sessions
+# X50 Navigation 0.15.13-navigator-30.5
 
-- X50 Navigation Magisk module
-- No activation required
-- Русская локализация настроек калибровки и GNSS Share
-- Компактная и выровненная компоновка карточек настроек
-- Анонимная статистика использования и добровольной поддержки автора
-- Magisk module versionCode: 89
-- SHA-256: `30a44f5a0fe8f0bda39d287ec9ebd36d5ec36a931e5c69d63151b6a3904810bc`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.12-usage-sessions/x50-navigation-magisk.zip
+- Restored the I-am-here action in Yandex Navigator 30.5.1.
+- Retained the I-am-here compatibility path for Yandex Navigator 29.7.0.
+- Fixed real usage-session accounting in anonymous statistics.
+- No activation required.
+- Magisk module versionCode: 90
+- SHA-256: `bce9de829ad821e296cfd819171dfe1268fd17ffa419821af502d5dba30c6642`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.13-navigator-30.5/x50-navigation-magisk.zip
