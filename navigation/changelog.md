@@ -1,10 +1,9 @@
-# X50 Navigation 0.15.15-internal-gnss
+# X50 Navigation 0.15.16-internal-gnss-diagnostics
 
-- Uses the standard Android mock-location model: select X50 Navigation in Developer options.
-- Removes direct LSPosed location substitution inside Navigator; the remaining hook only observes location for manual start.
-- Adds Internal GNSS input through the device receiver's NMEA stream, independent of the app's own mock publication.
-- Removes the obsolete External GPS to Android setting; selected real sources publish through the single mock-location owner while FakeGPS is off.
+- GPS live card now shows only data relevant to the selected source; Auto shows its active source.
+- Internal GNSS reports receiver state, visible and used satellites, plus Top-4 C/N₀ before the first PVT coordinate fix.
+- Keeps Internal physical NMEA input independent of the app's own mock-location publication.
 - No activation required.
-- Magisk module versionCode: 92
-- SHA-256: `b7814b90c6f9738502aa13abf3c63cd56af382c15254ba4b768bccd9517c4333`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.15-internal-gnss/x50-navigation-magisk.zip
+- Magisk module versionCode: 93
+- SHA-256: `0bb7183d8501fbdd29938fae164089bc9e2284c61566d591e089ec428b5c4538`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.16-internal-gnss-diagnostics/x50-navigation-magisk.zip
