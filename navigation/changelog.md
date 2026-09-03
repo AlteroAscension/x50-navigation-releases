@@ -6,5 +6,5 @@
 - Navigator 29.7.0 still requires a separate runtime regression test.
 - No activation required.
 - Magisk module versionCode: 91
-- SHA-256: `817c9eb374a1c29292b2e1772f5f5b09e8179a04adc797e709cad059d7fe76f0`
+- SHA-256: `dba3e471a5eb1c5d04c2e7625ef0ccf7e04ebc4c8e99ec1016a52af8793ad933`
 - Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.14-navigator-30.6/x50-navigation-magisk.zip
