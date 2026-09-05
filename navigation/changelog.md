@@ -1,9 +1,10 @@
-# X50 Navigation 0.15.16-internal-gnss-diagnostics
+# X50 Navigation 0.15.17-standalone-vehicle-api
 
-- GPS live card now shows only data relevant to the selected source; Auto shows its active source.
-- Internal GNSS reports receiver state, visible and used satellites, plus Top-4 C/N₀ before the first PVT coordinate fix.
-- Keeps Internal physical NMEA input independent of the app's own mock-location publication.
+- FakeGPS, route progress, calibration and speed alerts read vehicle speed and
+  odometer directly from the head unit's ECarX API; Gateway is not required.
+- Removed Gateway vehicle-feed selection and legacy command aliases.
+- Corrected the X50 fallback IPK odometer scale to tenths of a kilometre.
 - No activation required.
-- Magisk module versionCode: 93
-- SHA-256: `0bb7183d8501fbdd29938fae164089bc9e2284c61566d591e089ec428b5c4538`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.16-internal-gnss-diagnostics/x50-navigation-magisk.zip
+- Magisk module versionCode: 94
+- SHA-256: `144469aa9d41dd745d2b64803b3a69bc403fe9106a6a76601c50b93aea671c25`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.17-standalone-vehicle-api/x50-navigation-magisk.zip
