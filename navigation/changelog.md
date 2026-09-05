@@ -1,11 +1,15 @@
-# X50 Navigation 0.15.18-ecarx-diagnostics
+# X50 Navigation 0.15.20-diagnostics-layout
 
-- Added the **Diagnostics** tab with live vehicle speed, odometer and ECarX
-  error fields.
-- Added the minimal read-only ECarX privilege required for autonomous vehicle
-  speed and odometer access on the head unit.
-- Documents the persistent dedicated ADB key workflow for the head unit.
+- Карточка записи перенесена вниз вкладки «Диагностика»: состояние и пояснения
+  слева, кнопки записи и сохранения/отправки справа.
+- Кнопка записи показывает текущее действие: начать или остановить запись.
+- Полная диагностическая сессия: GPS, FakeGPS, публикация координат, настройки,
+  разрешения, коррекции, обучение, скорость/одометр и ошибки.
+- После остановки — отправка в поддержку; доступны сохранение и «Поделиться».
+- Бот: анализ по правилам, привязка к автомобилю и скачивание исходного лога.
+- Запись включается с согласия пользователя; координаты входят в файл,
+  токены и полный VIN исключаются. Сервер хранит архивы 14 дней.
 - No activation required.
-- Magisk module versionCode: 95
-- SHA-256: `3f25c174dc4b925b00e0eec326b528f827bd411adf347592841a7ea357fddb39`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.18-ecarx-diagnostics/x50-navigation-magisk.zip
+- Magisk module versionCode: 97
+- SHA-256: `4969991b3067bf4d1b88adacfeef475c57f05ddb80107332cdba11993738e81d`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.20-diagnostics-layout/x50-navigation-magisk.zip
