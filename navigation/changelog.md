@@ -1,15 +1,15 @@
-# X50 Navigation 0.15.20-diagnostics-layout
+# X50 Navigation 0.15.21-internal-gps-fix
 
-- Карточка записи перенесена вниз вкладки «Диагностика»: состояние и пояснения
-  слева, кнопки записи и сохранения/отправки справа.
-- Кнопка записи показывает текущее действие: начать или остановить запись.
-- Полная диагностическая сессия: GPS, FakeGPS, публикация координат, настройки,
-  разрешения, коррекции, обучение, скорость/одометр и ошибки.
-- После остановки — отправка в поддержку; доступны сохранение и «Поделиться».
-- Бот: анализ по правилам, привязка к автомобилю и скачивание исходного лога.
-- Запись включается с согласия пользователя; координаты входят в файл,
-  токены и полный VIN исключаются. Сервер хранит архивы 14 дней.
+- Исправлено зависание Internal GPS на ГУ: штатные координаты больше не
+  публикуются повторно через mock GPS и не отключают физический приёмник.
+- Magisk автоматически выдаёт разрешение на точную геолокацию.
+- Служба повторяет регистрацию GPS/NMEA и статуса спутников, если запустилась
+  до выдачи разрешения. Выбор mock-приложения остаётся за пользователем.
+- Проверено на SX11A3 после перезагрузки: Internal продолжает получать свежие
+  координаты и статус спутников при выбранном mock-приложении X50 Navigation.
+- Проверка выполнена с выключенным FakeGPS. Непрерывные коррекции от Internal
+  при активном FakeGPS на этой прошивке пока не подтверждены.
 - No activation required.
-- Magisk module versionCode: 97
-- SHA-256: `4969991b3067bf4d1b88adacfeef475c57f05ddb80107332cdba11993738e81d`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.20-diagnostics-layout/x50-navigation-magisk.zip
+- Magisk module versionCode: 98
+- SHA-256: `5881bd59356d681553eb0cef5af9b040504824aaa406d022b5f81fdbb8b82148`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.21-internal-gps-fix/x50-navigation-magisk.zip
