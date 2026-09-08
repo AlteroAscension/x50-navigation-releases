@@ -13,4 +13,4 @@
 - No activation required.
 - Magisk module versionCode: 100
 - SHA-256: `5702bc265bfd1b16c1f7933dff0485d34c0c93e64c5bfe70c0dce8f37d4d6cdb`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.23-route-rebuild-lock/x50-navigation-magisk.zip
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.23-route-rebuild-lock/x50-navigation-magisk-0.15.23-route-rebuild-lock.zip
