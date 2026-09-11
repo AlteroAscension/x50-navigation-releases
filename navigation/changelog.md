@@ -1,18 +1,19 @@
-# X50 Navigation 0.15.29-remote-adb-state-fix
+# X50 Navigation 0.15.30-remote-adb-safe-local
 
 - Добавлена opt-in удалённая ADB-диагностика: пользователь создаёт запрос на
   устройстве, владелец подтверждает короткую сессию в боте, а ADB остаётся
   доступным только через исходящий TLS-туннель и server loopback.
-- Исправлен worker после отзыва, таймаута или перезагрузки remote-ADB сессии:
-  очистка выполняется один раз, а legacy-состояние восстанавливает сохранённый
-  wireless ADB вместо повторяющихся команд остановки dbd.
-- Туннель запускается лишь после fail-closed подготовки dbd и временного
-  ключа worker'ом; отсутствие файла db_keys на старом Android обработано.
+- Удалённое ADB стало безопасным для старых ядер: worker больше никогда не
+  запускает, не останавливает и не перенастраивает dbd, TCP ADB или USB.
+- Сессия использует только уже существующий локальный 127.0.0.1:5555;
+  при его отсутствии она завершается fail-closed без изменения устройства.
+- Cleanup удаляет только временный ключ и loopback firewall. Stale-state
+  старых версий не может менять ADB-настройки при следующей загрузке.
 - Карточка удалённой ADB-диагностики сокращена до статуса и управления;
   причина ошибки туннеля показывается только при ошибке.
 - Проверены серверный broker, ключевая изоляция, SQLite consent-state,
   WebSocket loopback и упаковка Magisk-модуля.
 - No activation required.
-- Magisk module versionCode: 106
-- SHA-256: `2f7386e75ece6b41f9e4e9a8dff26f0e7bbf7481869735f4e2b32b7828d47e9e`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.29-remote-adb-state-fix/x50-navigation-magisk-0.15.29-remote-adb-state-fix.zip
+- Magisk module versionCode: 107
+- SHA-256: `f3ac9db8fefa93d09d84d7a815646b894bf49fc7d80da4627205036eeabdff84`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.30-remote-adb-safe-local/x50-navigation-magisk-0.15.30-remote-adb-safe-local.zip
