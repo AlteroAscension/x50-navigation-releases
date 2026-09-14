@@ -1,21 +1,18 @@
-# X50 Navigation 0.15.31-remote-adb-dynamic-port
+# X50 Navigation 0.15.45-equal-layouts
 
-- Добавлена opt-in удалённая ADB-диагностика: пользователь создаёт запрос на
-  устройстве, владелец подтверждает короткую сессию в боте, а ADB остаётся
-  доступным только через исходящий TLS-туннель и server loopback.
-- Удалённое ADB стало безопасным для старых ядер: worker больше никогда не
-  запускает, не останавливает и не перенастраивает dbd, TCP ADB или USB.
-- Сессия использует только уже существующий локальный ADB endpoint;
-  worker теперь read-only определяет его фактический runtime-порт; серверный
-  session-порт независим от него. При отсутствии local adbd сессия
-  завершается fail-closed без изменения устройства.
-- Cleanup удаляет только временный ключ и loopback firewall. Stale-state
-  старых версий не может менять ADB-настройки при следующей загрузке.
-- Карточка удалённой ADB-диагностики сокращена до статуса и управления;
-  причина ошибки туннеля показывается только при ошибке.
-- Проверены серверный broker, ключевая изоляция, SQLite consent-state,
-  WebSocket loopback и упаковка Magisk-модуля.
+- Интерактивное превью нативного оверлея Навигатора в настройках модуля:
+  полное моделирование карточек событий, ограничений скорости, расстояния,
+  камер и панели ETA с точным соблюдением скруглений и слоев интерфейса.
+- Анимированное смарт-оповещение с пропорциональным масштабированием и
+  привязкой к карточке контекста.
+- Унификация макетов: стандартный режим и режим «только камеры» приведены к
+  единой сбалансированной структуре полей событий.
+- Добавлен защищенный гибридный прогресс одометра (guarded hybrid odometer
+  progress) для надежного отслеживания продвижения по маршруту.
+- Восстановление и синхронизация таймингов GNSS Share при перезапуске
+  внешнего источника координат.
+- Усилена стабильность runtime FakeGPS и процедур удаленной ADB-диагностики.
 - No activation required.
-- Magisk module versionCode: 108
-- SHA-256: `826f85af3bfcb6beb94efd2466750200244203ad2df7f73043491397726bb32f`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.31-remote-adb-dynamic-port/x50-navigation-magisk-0.15.31-remote-adb-dynamic-port.zip
+- Magisk module versionCode: 122
+- SHA-256: `6994e1d804c132ecbef5b6b289e95ac491e4fc46c9284e74aa9434a689ed5569`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.45-equal-layouts/x50-navigation-magisk-0.15.45-equal-layouts.zip
