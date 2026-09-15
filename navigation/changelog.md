@@ -1,16 +1,10 @@
-# X50 Navigation 0.15.46-clean-settings
+# X50 Navigation 0.15.48-lunaris-adb-import
 
-- Очистка страницы GPS в настройках: удалены дублирующие карточки фиктивных
-  местоположений и ручной публикации (перенесены в раздел «Диагностика»).
-- Поддержка гибкой длительности сессии удаленной ADB-диагностики в боте
-  (30 минут, 1 час, 2 часа, 4 часа) и устранение циклического сброса диалога авторизации.
-- Расширенная телеметрия статистики: передача версии Навигатора, накопленного
-  пробега калибровки и актуальных калибровочных коэффициентов.
-- Детальная диагностическая запись: полное протоколирование входящих координат,
-  принятых и отклоненных точек со всеми метриками и точными причинами фильтрации.
-- Полное перехватывание и запись всех runtime-ошибок и исключений в журнал поддержки.
-- Документирование протокола и интеграции с GNSS Share.
-- No activation required.
-- Magisk module versionCode: 123
-- SHA-256: `dec42b6ecae4bc0f2fa4cc7112768f730a08a764b09824847ef1764afbffd1e6`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.46-clean-settings/x50-navigation-magisk-0.15.46-clean-settings.zip
+- Remote ADB now mirrors Lunaris key import on SX11A3: it stages the approved
+  key at /sdcard/adbkey.pub, appends it with the required newline sentinels,
+  then removes the staging file.
+- Remote ADB remains loopback-only and does not restart dbd or change USB/
+  ADB system properties.
+- Magisk module versionCode: 125
+- SHA-256: `2f1a850cd2ecb5ce72f2140c63c3a1e06b1e47bb2846e772b182db1fa31afde4`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.48-lunaris-adb-import/x50-navigation-magisk-0.15.48-lunaris-adb-import.zip
