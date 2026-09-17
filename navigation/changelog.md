@@ -1,11 +1,9 @@
-# X50 Navigation 0.15.63-twogis-stats
+# X50 Navigation 0.15.64-fused-relay
 
-- Added 2GIS route-source mode with automatic route capture and safe route
-  re-anchoring after a 2GIS rebuild.
-- 2GIS learning is isolated: it records a comparison candidate without changing
-  the Yandex-derived coefficients used by FakeGPS.
-- Anonymous usage statistics now distinguish Yandex and 2GIS sessions without
-  sending route geometry or coordinates.
-- Magisk module versionCode: 140
-- SHA-256: `216cf78b69f7701b5bfc7db61cc761df276ea12a4232e6886efc3e4a419be91d`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.63-twogis-stats/x50-navigation-magisk-0.15.63-twogis-stats.zip
+- Relay satellite observations remain stable through optional packets that omit
+  the field; an explicitly reported zero is still passed through as zero.
+- The protected build keeps the reflected Google Fused mock-location API for
+  2GIS compatibility on devices where Google Play services are available.
+- Magisk module versionCode: 141
+- SHA-256: `bba97b5e2be1beabc3e9d255193393994c38084edcc2578a116e5d294893583c`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.64-fused-relay/x50-navigation-magisk-0.15.64-fused-relay.zip
