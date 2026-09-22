@@ -5,5 +5,5 @@
 - Persists session trajectories to JSON files and streams via REST endpoints (/api/trajectory/*).
 - Embedded speed camera panel into 2GIS ETA block via verified native Qt adapter.
 - Magisk module versionCode: 151
-- SHA-256: `9fe0495da29e94ab826584dbd23e27b6aa81bd889fa3bcb2d01277701e1a8e0d`
+- SHA-256: `0331466a425264562dfd11ceaf664645880d0c14ce7e31189600bdc9d35c5407`
 - Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.74-ha-trajectory/x50-navigation-magisk-0.15.74-ha-trajectory.zip
