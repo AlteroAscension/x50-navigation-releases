@@ -1,10 +1,8 @@
-# X50 Navigation 0.15.76-steering-trajectory
+# X50 Navigation 0.15.77-full-trip-journal
 
-- Added pure-sensor Virtual Trajectory Engine (Dead Reckoning bicycle model L=2.60m, G=15.5) utilizing fresh CAN ID 0x0E0 steering angle/rate, speed, and odometer.
-- Records relative metric coordinates (x, y, theta) without premature GPS clamping.
-- Persists session trajectories to JSON files and streams via REST endpoints (/api/trajectory/*).
-- Embedded speed camera panel into 2GIS ETA block via verified native Qt adapter.
-- Added opt-in 2GIS Dashboard Binder reads, disabled by default and independent of route geometry capture.
-- Magisk module versionCode: 153
-- SHA-256: `8af6d54056a505e58e3e6503282ac997ffc43fe867e98948bb53a8a3173ab752`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.76-steering-trajectory/x50-navigation-magisk-0.15.76-steering-trajectory.zip
+- Adds complete opt-in trip journal export from Diagnostics, including accepted and rejected route/GPS/steering events and reasons.
+- Transfers compressed journal archives to Home Assistant in authenticated resumable chunks.
+- Preserves the existing steering trajectory, MapKit capture and 2GIS integrations.
+- Magisk module versionCode: 154
+- SHA-256: `741cf49a016bd23cebf1b89d0c7c492858dc7eefd1ce79dccdd54892b8b9abf7`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.77-full-trip-journal/x50-navigation-magisk-0.15.77-full-trip-journal.zip
