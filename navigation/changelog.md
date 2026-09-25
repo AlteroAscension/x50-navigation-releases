@@ -1,8 +1,8 @@
-# X50 Navigation 0.15.77-full-trip-journal
+# X50 Navigation 0.15.78-steering-overlay
 
-- Adds complete opt-in trip journal export from Diagnostics, including accepted and rejected route/GPS/steering events and reasons.
-- Transfers compressed journal archives to Home Assistant in authenticated resumable chunks.
-- Preserves the existing steering trajectory, MapKit capture and 2GIS integrations.
-- Magisk module versionCode: 154
-- SHA-256: `741cf49a016bd23cebf1b89d0c7c492858dc7eefd1ce79dccdd54892b8b9abf7`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.77-full-trip-journal/x50-navigation-magisk-0.15.77-full-trip-journal.zip
+- Adds an optional steering-trajectory overlay on the captured route, with a live steering-zero estimate and fit diagnostics. Its progress-correction and departure controls are off by default.
+- Limits steering-based off-route publication and route handoff to a fresh trusted anchor within 20 seconds and 150 metres of travel.
+- Includes the steering trajectory recorder and opt-in full trip journal with authenticated Home Assistant transfer from the 0.15.76 and 0.15.77 source versions.
+- Magisk module versionCode: 155
+- SHA-256: `3f35f1330f26cd3ecea93be75a3f374e49018f1408120b55279b4219818bc786`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.78-steering-overlay/x50-navigation-magisk-0.15.78-steering-overlay.zip
