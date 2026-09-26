@@ -1,10 +1,9 @@
 # X50 Navigation 0.15.83-steering-route-position
 
-- Publishes the live FakeGPS position from a steering pose registered to the captured route. Route progress and calibrated physical distance remain the geographic and distance references.
-- Seeds the steering pose from a fresh FakeGPS route point before a long shape match is available; route geometry bounds the position and bearing.
-- Applies bounded steering-angle alignment on a matching short window. Good GPS retains priority for route-progress correction.
-- With the steering off-route option enabled, a sustained lateral departure can continue the wheel trajectory from a trusted route anchor. Stale steering, anchor expiry, and route changes stop that mode.
-- Adds route-aligned coordinates to recorded steering points and reports the active position model in diagnostics.
+- Adds a FakeGPS-route coordinate and route generation to each recorded steering trajectory point while route publication is active.
+- Advances point coordinates between FakeGPS ticks with the same calibrated physical-distance clock; GPS corrections move the FakeGPS base without changing travelled length.
+- Leaves raw sensor x/y intact for turn matching and departure detection, and omits geographic alignment during route loss or confirmed departure.
+- Throttles incomplete steering fit diagnostics to the intended one-second interval.
 - Magisk module versionCode: 160
-- SHA-256: `38f80f4a02b6267531b5a1e4098ee30dcc168eee03c7a4a39ddf06975384ffeb`
+- SHA-256: `848745c012b8c482a881bc84fb60962385b44044ba90d9607daa395eb972f925`
 - Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.83-steering-route-position/x50-navigation-magisk-0.15.83-steering-route-position.zip
