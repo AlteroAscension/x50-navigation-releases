@@ -1,9 +1,10 @@
-# X50 Navigation 0.15.81-fakegps-steering-align
+# X50 Navigation 0.15.83-steering-route-position
 
-- Uses one calibrated physical-distance clock for FakeGPS progress and the steering trajectory; missing steering leaves a visible trace gap without losing travelled metres.
-- Anchors trusted local steering shape to the latest published FakeGPS route point, including earlier GPS progress corrections, and rejects stale or previous-route anchors.
-- Allows steering progress corrections only after stable interior matches with estimated uncertainty below FakeGPS uncertainty; retains GPS priority and bounded corrections.
-- Adds distance and correction-confidence diagnostics. Technical details and offline trip evidence are in the private source documentation.
-- Magisk module versionCode: 158
-- SHA-256: `ffe69ae07b18504cd5c98efca219fad8f4c883ee8343061cb9e13116f5076355`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.81-fakegps-steering-align/x50-navigation-magisk-0.15.81-fakegps-steering-align.zip
+- Publishes the live FakeGPS position from a steering pose registered to the captured route. Route progress and calibrated physical distance remain the geographic and distance references.
+- Seeds the steering pose from a fresh FakeGPS route point before a long shape match is available; route geometry bounds the position and bearing.
+- Applies bounded steering-angle alignment on a matching short window. Good GPS retains priority for route-progress correction.
+- With the steering off-route option enabled, a sustained lateral departure can continue the wheel trajectory from a trusted route anchor. Stale steering, anchor expiry, and route changes stop that mode.
+- Adds route-aligned coordinates to recorded steering points and reports the active position model in diagnostics.
+- Magisk module versionCode: 160
+- SHA-256: `38f80f4a02b6267531b5a1e4098ee30dcc168eee03c7a4a39ddf06975384ffeb`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.83-steering-route-position/x50-navigation-magisk-0.15.83-steering-route-position.zip
