@@ -5,5 +5,5 @@
 - Allows steering progress corrections only after stable interior matches with estimated uncertainty below FakeGPS uncertainty; retains GPS priority and bounded corrections.
 - Adds distance and correction-confidence diagnostics. Technical details and offline trip evidence are in the private source documentation.
 - Magisk module versionCode: 158
-- SHA-256: `bc85a97e5b985228ff43aa2ebe25c87c3edc2d1880aa903a144bb4c4825c7b16`
+- SHA-256: `ffe69ae07b18504cd5c98efca219fad8f4c883ee8343061cb9e13116f5076355`
 - Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.81-fakegps-steering-align/x50-navigation-magisk-0.15.81-fakegps-steering-align.zip
