@@ -1,9 +1,9 @@
-# X50 Navigation 0.15.83-steering-route-position
+# X50 Navigation 0.15.86-inertial-navigation
 
-- Adds a FakeGPS-route coordinate and route generation to each recorded steering trajectory point while route publication is active.
-- Advances point coordinates between FakeGPS ticks with the same calibrated physical-distance clock; GPS corrections move the FakeGPS base without changing travelled length.
-- Leaves raw sensor x/y intact for turn matching and departure detection, and omits geographic alignment during route loss or confirmed departure.
-- Throttles incomplete steering fit diagnostics to the intended one-second interval.
-- Magisk module versionCode: 160
-- SHA-256: `848745c012b8c482a881bc84fb60962385b44044ba90d9607daa395eb972f925`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.83-steering-route-position/x50-navigation-magisk-0.15.83-steering-route-position.zip
+- Adds an opt-in inertial trajectory based on calibrated vehicle distance, CAN steering and a guarded ESP32 compass heading.
+- Anchors only to a reliable GPS fix or explicit "I am here" position and keeps recording across route changes.
+- On a confirmed route departure, publishes inertial coordinates until the new captured route matches position and travel direction.
+- Exports inertial points in trajectory snapshots for Home Assistant; the feature remains disabled by default.
+- Magisk module versionCode: 163
+- SHA-256: `6cb1e6feaaac5446e22aef202a8a7cf67701976a4e64903f207e6b16ffefcb2a`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.86-inertial-navigation/x50-navigation-magisk-0.15.86-inertial-navigation.zip
