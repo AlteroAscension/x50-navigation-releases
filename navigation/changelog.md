@@ -1,9 +1,9 @@
-# X50 Navigation 0.15.88-compass-axes
+# X50 Navigation 0.15.89-gnss-compass-calibration
 
-- Records every inertial step input, compass decision and rejection reason in the trip journal.
-- Publishes the latest compass and inertial step alongside GPS in live diagnostics for Home Assistant.
-- Includes raw magnetometer X/Y/Z axes in compass snapshots, trip diagnostics and live HA samples.
-- Retains the guarded, opt-in inertial trajectory and route-departure handoff from the previous release.
-- Magisk module versionCode: 165
-- SHA-256: `835758acab205c93d092c54c4b8d96a0f2d1af8013f7674cb10baa3336d7a5fd`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.88-compass-axes/x50-navigation-magisk-0.15.88-compass-axes.zip
+- Shows ESP32 GNSS satellite geometry, visible and used counts in Navigation settings.
+- Resets stale system satellite counts after GPS data expires.
+- Adds guarded two-circle compass calibration and keeps sensor-calibrated headings in diagnostics.
+- Retains raw magnetometer axes and inertial step decisions in trip and Home Assistant diagnostics.
+- Magisk module versionCode: 166
+- SHA-256: `a6aae01f1ee7b0bf5f547c5086b212568cd7b74c8e16d3b27273c7e22f4aaca5`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.89-gnss-compass-calibration/x50-navigation-magisk-0.15.89-gnss-compass-calibration.zip
