@@ -1,9 +1,12 @@
-# X50 Navigation 0.15.89-gnss-compass-calibration
+# X50 Navigation 0.15.90-minimap-radar
 
-- Shows ESP32 GNSS satellite geometry, visible and used counts in Navigation settings.
-- Resets stale system satellite counts after GPS data expires.
-- Adds guarded two-circle compass calibration and keeps sensor-calibrated headings in diagnostics.
-- Retains raw magnetometer axes and inertial step decisions in trip and Home Assistant diagnostics.
-- Magisk module versionCode: 166
-- SHA-256: `d78092867f849fce85efdd0fee390df8c424770c56f3fab8691953db3977cce6`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.89-gnss-compass-calibration/x50-navigation-magisk-0.15.89-gnss-compass-calibration.zip
+- Circular GTA-style minimap radar in Yandex Navigator bottom-right overlay.
+- Real-time visualization of captured FakeGPS route polyline alongside live inertial dead-reckoning trajectory.
+- Heading-Up orientation with vehicle arrow pointing forward and rotating compass North chip.
+- Configurable radar radius (50m–500m) and radar diameter (80dp–240dp, default 140dp) in Diagnostics tab.
+- Click radar overlay to cycle through zoom radii (50m -> 100m -> 150m -> 250m -> 500m).
+- Balanced automotive typography with high-contrast pill badges and conditional drift delta (Δ X м).
+- Manual "Завершить запись поездки" button in Diagnostics tab for instant journal archival.
+- Magisk module versionCode: 167
+- SHA-256: `bf0c1668f80bcc41029b0095d01ff201e15d6244e328d1f7efcf0b738c5893d9`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.90-minimap-radar/x50-navigation-magisk-0.15.90-minimap-radar.zip
