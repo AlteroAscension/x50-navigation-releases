@@ -13,5 +13,5 @@
   - Relaxed steering angle latency threshold for responsive curve tracing.
 - Responsive settings UI (MainActivity) with new choice card for overlay shape and orientation modes.
 - Magisk module versionCode: 168
-- SHA-256: `4333bf570a8e6a9c1e098b8ee5b6413be24da53f6d191556d73d95b38344e75c`
+- SHA-256: `85d31c53976c5f9e5f745a676caa8a5863e1df88efbbbe082748b2212de72d04`
 - Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.91-yandex-minimap/x50-navigation-magisk-0.15.91-yandex-minimap.zip
