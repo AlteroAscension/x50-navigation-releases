@@ -1,3 +1,14 @@
+# X50 Navigation 0.15.93-smooth-radar
+
+- Buttery smooth minimap/radar overlay animation and rotation:
+  - Angular interpolation with shortest-arc normalization and sensor micro-jitter deadband (< 0.15°).
+  - Positional coordinate interpolation for continuous smooth gliding under the vehicle cursor.
+  - Real GPS (1 Hz) and secondary points smoothly glide to new fixes without discrete jumps.
+  - Dynamic render framerate: switches to ~33 FPS (30ms) during active rotation/movement, drops to 8 FPS when stationary for zero CPU load.
+- Magisk module versionCode: 170
+- SHA-256: `41f488c89776d7ae58fe61009ba9928b9ee644729ea38cc3435a99b609788b5e`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.93-smooth-radar/x50-navigation-magisk-0.15.93-smooth-radar.zip
+
 # X50 Navigation 0.15.92-inertial-compass-fix
 
 - Fixed sawtooth ("зуб пилы") inertial trajectory jumps and heading divergence:
