@@ -1,0 +1,7 @@
+id=x50_navigation
+name=X50 Navigation
+version=0.15.57-google-fused-2gis
+versionCode=134
+author=LesNIK
+description=Independent MapKit, native Navigator UI and FakeGPS runtime
+updateJson=https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/update.json

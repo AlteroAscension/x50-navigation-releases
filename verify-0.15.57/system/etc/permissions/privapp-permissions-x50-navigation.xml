@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="ru.lesnik.x50navigation">
+        <!-- Settings.Global is the existing narrow bridge to LSPosed code in
+             Navigator. Mock-location access is intentionally not granted. -->
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.SET_TIME" />
+        <!-- Restore access only to the USB receiver explicitly selected in the UI. -->
+        <permission name="android.permission.MANAGE_USB" />
+        <permission name="android.car.permission.CAR_VENDOR_EXTENSION" />
+    </privapp-permissions>
+</permissions>
