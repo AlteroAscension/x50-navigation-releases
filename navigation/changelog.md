@@ -1,41 +1,11 @@
-# X50 Navigation 0.15.93-smooth-radar
+# X50 Navigation 0.15.94-inertial-turn-fix
 
-- Buttery smooth minimap/radar overlay animation and rotation:
-  - Angular interpolation with shortest-arc normalization and sensor micro-jitter deadband (< 0.15°).
-  - Positional coordinate interpolation for continuous smooth gliding under the vehicle cursor.
-  - Real GPS (1 Hz) and secondary points smoothly glide to new fixes without discrete jumps.
-  - Dynamic render framerate: switches to ~33 FPS (30ms) during active rotation/movement, drops to 8 FPS when stationary for zero CPU load.
-- Magisk module versionCode: 170
-- SHA-256: `41f488c89776d7ae58fe61009ba9928b9ee644729ea38cc3435a99b609788b5e`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.93-smooth-radar/x50-navigation-magisk-0.15.93-smooth-radar.zip
-
-# X50 Navigation 0.15.92-inertial-compass-fix
-
-- Fixed sawtooth ("зуб пилы") inertial trajectory jumps and heading divergence:
-  - Added strict residual threshold (<= 18.0°) to straight_recovery to prevent magnetic anomalies from pulling trajectory into ditch.
-  - Slew rate towards compass reduced to gentle <= 2.0°/sec.
-  - Eliminated alignToFake 30m-60m dead-zone for continuous soft corridor correction.
-  - Made maximum step size dynamic (up to 35m+) to prevent dropping valid highway motion samples (>90 km/h) on GC/scheduling jitter.
-- Integrated Belgee X50 factory 2D hard/soft iron compass calibration profile fallback when raw axes (X, Y, Z) are available.
-- Added comprehensive alignToFake action diagnostics logging (`align_action`, `align_distance_m`, `align_diff_heading_deg`, `calibration_source`).
-- Magisk module versionCode: 169
-- SHA-256: `f100541a0c16b332a1cde2d3174610fbc16cbce3d39951a7b2218ed2fc304ab4`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.92-inertial-compass-fix/x50-navigation-magisk-0.15.92-inertial-compass-fix.zip
-
-# X50 Navigation 0.15.91-yandex-minimap
-
-- Native Yandex Navigator style minimap overlay with 3D faceted yellow chevron cursor (#FFD600 / #E09800) matching native HUD styling.
-- Selectable overlay shape: Floating Card (squircle) vs Circular Disc radar in Diagnostics settings.
-- Native color palette: vibrant emerald green (#27C200) route polyline, warm amber (#FF9800) dead-reckoning trajectory, emerald dot (#32C649) for hardware GPS fix.
-- Interactive gestures:
-  - Single tap: cycle zoom radius (50m -> 100m -> 150m -> 250m -> 500m).
-  - Double tap: toggle orientation (Heading-Up / Car-Up vs North-Up).
-  - Long press: toggle center anchor between FakeGPS point and Inertial dead-reckoning point.
-- Inertial dead-reckoning drift prevention:
-  - Compass slew alignment at >= 15 km/h to eliminate angular heading drift.
-  - Automatic re-anchor to current point when drift exceeds 75m.
-  - Relaxed steering angle latency threshold for responsive curve tracing.
-- Responsive settings UI (MainActivity) with new choice card for overlay shape and orientation modes.
-- Magisk module versionCode: 168
-- SHA-256: `85d31c53976c5f9e5f745a676caa8a5863e1df88efbbbe082748b2212de72d04`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.91-yandex-minimap/x50-navigation-magisk-0.15.91-yandex-minimap.zip
+- Fixed inertial heading freeze on sharp intersection / off-route turns:
+  - Dynamically expands allowed compass window up to 110° (instead of 25° cap) and tracking rate up to 45°/s when steering wheel and compass agree on turn direction (`turn_agrees`).
+  - Suppressed `alignToFake` corridor pull and heading nudge when driver is actively steering (`|steer| > 20°`) or heading deviates (`|diffH| > 25°`), allowing natural dead-reckoning breakout into turns.
+  - Removed 60m `hard_reanchor` teleporter; added clean `reanchor()` upon verified rebuild route recovery.
+  - Enhanced `straight_recovery` with compass stability filter allowing recovery up to 50° residual when driving straight.
+  - Graceful gear decoding fallback for emulator and rootless targets without ECarX gear property.
+- Magisk module versionCode: 171
+- SHA-256: `e72007d67fdf795c6468b7d49a0e8ed89fa5bb2a60b38a09b69b3457c8533585`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.94-inertial-turn-fix/x50-navigation-magisk-0.15.94-inertial-turn-fix.zip
