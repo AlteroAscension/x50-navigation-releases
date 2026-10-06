@@ -1,11 +1,17 @@
-# X50 Navigation 0.15.94-inertial-turn-fix
+# Живой релиз инерциальной траектории — 0.15.96
 
-- Fixed inertial heading freeze on sharp intersection / off-route turns:
-  - Dynamically expands allowed compass window up to 110° (instead of 25° cap) and tracking rate up to 45°/s when steering wheel and compass agree on turn direction (`turn_agrees`).
-  - Suppressed `alignToFake` corridor pull and heading nudge when driver is actively steering (`|steer| > 20°`) or heading deviates (`|diffH| > 25°`), allowing natural dead-reckoning breakout into turns.
-  - Removed 60m `hard_reanchor` teleporter; added clean `reanchor()` upon verified rebuild route recovery.
-  - Enhanced `straight_recovery` with compass stability filter allowing recovery up to 50° residual when driving straight.
-  - Graceful gear decoding fallback for emulator and rootless targets without ECarX gear property.
-- Magisk module versionCode: 171
-- SHA-256: `e72007d67fdf795c6468b7d49a0e8ed89fa5bb2a60b38a09b69b3457c8533585`
-- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.94-inertial-turn-fix/x50-navigation-magisk-0.15.94-inertial-turn-fix.zip
+В модуль перенесён взвешенный сглаживатель последних 45 секунд. Он совместно использует физический путь от скорости/одометра, руль, компас, независимый GPS и форму захваченного маршрута. Расчёт выполняется в отдельном потоке раз в три секунды; исправляется цепочка прошлых точек.
+
+Миникарта Навигатора получает пересчитанную оранжевую траекторию. История увеличена до 800 точек, масштаб 500 м сохранён. «Я здесь» привязывает также инерциальную координату и начинает новый сегмент. Для начальной привязки доступен также свежий реальный GPS с компасом или достоверным GPS-курсом.
+
+Совпадение с маршрутом проверяется по исходным датчикам. На прямой поправка прогресса считается неоднозначной; при пропадании свежих ESP/GPS-данных маршрутная поддержка отключается. Настоящий съезд сохраняется как свободное движение. GPS-фактор привязывается ко времени измерения, повторные и mock-координаты не используются как независимые измерения.
+
+Журнал поездки сохраняет пересчитанные окна, свободную гипотезу, смещение компаса, коэффициент руля, режим, оценку поправки прогресса и время расчёта. Оценка поправки прогресса в этом первом живом релизе диагностическая: автоматическое управление FakeGPS сохраняет существующие проверки.
+
+Проверено: JVM-регрессии Java-алгоритма, реальные архивы, защищённая R8-сборка и подпись APK. На ГУ эта версия ещё не проверена.
+
+Обновление: Magisk → Модули → X50 Navigation → Обновить; после установки перезагрузить ГУ. Включить миникарту или инерциальную диагностику и запись журнала поездок.
+
+- Magisk module versionCode: 173
+- SHA-256: `0f3754bfbcbd05a440bf6606de9e289b15e090b0df6d9862f97999d816c6398d`
+- Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.96-inertial-window-fusion/x50-navigation-magisk-0.15.96-inertial-window-fusion.zip
