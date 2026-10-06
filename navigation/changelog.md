@@ -40,5 +40,5 @@
 
 
 - Magisk module versionCode: 175
-- SHA-256: `ab8a454863efecc9999b60ab77424f26c3a1c60882a3c1575288b6cb17d63d8d`
+- SHA-256: `f0bc4778c75f236346085c8393d32b781a429d6686374ff118d831e4808fda9f`
 - Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.98-system-consistency/x50-navigation-magisk-0.15.98-system-consistency.zip
