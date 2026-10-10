@@ -9,5 +9,5 @@
 
 
 - Magisk module versionCode: 186
-- SHA-256: `d5e4ff92bd6a8ed4c24b2d7c36c139aeae54d5eeeedc3766050b6dd3454fe72c`
+- SHA-256: `307b889084316a25822ceed8978c9ec58826294b3864821afe7016f551657eb3`
 - Module ZIP: https://raw.githubusercontent.com/AlteroAscension/x50-navigation-releases/main/navigation/releases/navigation-v0.15.109-route-departure-diagnostics/x50-navigation-magisk-0.15.109-route-departure-diagnostics.zip
